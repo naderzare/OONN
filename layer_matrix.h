@@ -174,7 +174,7 @@ void push_zeros_to_array3D(long double *** data, int m, int n, int z) {
 		}
 	}
 }
-class layer {
+class oldlayer {
 public:
 	int nx;
 	int nh;
@@ -243,7 +243,7 @@ public:
 	};
 	layer_type l_type;
 	function_type f_type;
-	layer(int nnx, int nnh, layer_type layer_t, function_type function_t) {
+	oldlayer(int nnx, int nnh, layer_type layer_t, function_type function_t) {
 		l_type = layer_t;
 		f_type = function_t;
 		nx = nnx;
