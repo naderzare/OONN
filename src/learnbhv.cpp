@@ -34,7 +34,7 @@ void set_simple_w(bool read,vector<int> deepnoron){
 			deep.set_data_set(datax,datax);
 		deep.devide_data_set();
 		if(read)deep.read_weith();
-		deep.learn_epoches(layered_learn_epoch,2,false,true,exit_and_print);
+        deep.LearnEpoches(layered_learn_epoch,2,false,true,exit_and_print);
 		layered_learn_epoch = 50;
 		deep.write_weith(1);
 
@@ -94,9 +94,9 @@ int main(int argc, char * argv[]) {
 	int num_x = deep_noron[0];//92//550 //605
 	int num_y = deep_noron[layer_number];
 
-	int layered_learn_epoch = 100000;
+    int layered_learn_epoch = 100;
 
-	int size_learn = 20000;
+    int size_learn = 100;
 	NN deep(size_learn,deep_noron,deep_ltype,deep_ftype,90.0,10.0,0.0,"deep","deep",1,1);
 
 	if(!just_test){
@@ -107,7 +107,7 @@ int main(int argc, char * argv[]) {
 	if(read_weight)deep.read_weith();
 
 	if(!just_test){
-		deep.learn_epoches(layered_learn_epoch,2,true,false,exit_and_print);
+        deep.LearnEpoches(layered_learn_epoch,2,true,false,exit_and_print);
 		deep.write_weith();
 	}
 
